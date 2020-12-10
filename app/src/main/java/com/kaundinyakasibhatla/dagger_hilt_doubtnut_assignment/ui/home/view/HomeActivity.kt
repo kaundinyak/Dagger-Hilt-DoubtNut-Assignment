@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_home.*
 @AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
 
-    private val homeViewModel : HomeViewModel by viewModels()
+    private val homeViewModel: HomeViewModel by viewModels()
     private lateinit var adapter: MainAdapter
 
 
@@ -37,8 +37,10 @@ class HomeActivity : AppCompatActivity() {
         recyclerView.addItemDecoration(
             DividerItemDecoration(
                 recyclerView.context,
+
                 (recyclerView.layoutManager as LinearLayoutManager).orientation
             )
+
         )
         recyclerView.adapter = adapter
     }
